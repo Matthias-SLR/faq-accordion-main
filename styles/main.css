@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(/assets/images/background-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-color: hsl(275, 100%, 97%);
+  font-family: "Work Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 14% 30% 10% 30%;
+}
+
+section {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px -20px hsl(292, 16%, 49%);
+  padding: 2em;
+}
+
+section h1 {
+  font-size: 3em;
+  color: hsl(292, 42%, 14%);
+  display: flex;
+  align-items: center;
+}
+section h1 img {
+  width: 0.7em;
+  margin-right: 0.5em;
+}
+
+section button {
+  background-color: hsl(0, 0%, 100%);
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  border: none;
+}
+
+.hr {
+  border: 1px solid hsl(275, 100%, 97%);
+}
+
+.accordion-header {
+  padding: 20px 0 20px 0;
+  cursor: pointer;
+  font-weight: 600;
+  color: hsl(292, 42%, 14%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.accordion-header:hover {
+  color: rgb(173, 40, 235);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.accordion-content p {
+  margin: 0;
+  color: hsl(292, 16%, 49%);
+  line-height: 1.5em;
+}
+
+.accordion-item.active {
+  padding-bottom: 20px;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 100%;
+}
+
+.accordion-header .button-p {
+  max-height: 100%;
+  position: absolute;
+  right: 32%;
+}
+
+.accordion-header .button-m {
+  max-height: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 32%;
+}
+
+.accordion-item.active .button-p {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.accordion-item.active .button-m {
+  max-height: 100%;
+}
+
+.attribution {
+  margin-top: 1em;
+  color: hsl(292, 16%, 49%);
+}
+
+.attribution a {
+  color: hsl(292, 42%, 14%);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  color: rgb(173, 40, 235);
+}
+
+@media all and (max-width: 1439px) {
+  body {
+    padding: 15% 20% 10% 20%;
+  }
+  .accordion-header .button-p {
+    right: 22%;
+  }
+  .accordion-header .button-m {
+    right: 22%;
+  }
+  .accordion-header {
+    margin-right: 20%;
+  }
+}
+
+@media all and (max-width: 375px) {
+  body {
+    background-image: url(/assets/images/background-pattern-mobile.svg);
+    padding: 8.5em 1em 5em 1em;
+  }
+
+  section h1 {
+    font-size: 2em;
+  }
+  section button {
+    text-align: left;
+  }
+
+  .accordion-header {
+    margin-right: 20%;
+  }
+
+  .accordion-header .button-p {
+    right: 9%;
+  }
+  .accordion-header .button-m {
+    right: 9%;
+  }
+
+  .accordion-content {
+    font-size: 14px;
+  }
+  .attribution {
+    font-size: 12px;
+  }
+}
